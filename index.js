@@ -1,7 +1,6 @@
 const net = require("net");
 const tls = require("tls");
 function checkArg(arg, type){
-    
     if(arg !== undefined && arg !== null){
         if(!(arg.constructor == type)) 
             throw new TypeError(`Arg ${type} != ${arg}.constructor`);
