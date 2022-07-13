@@ -1,5 +1,5 @@
 {
-  "name": "gpc",
+  "name": "gpc-client",
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",

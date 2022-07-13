@@ -89,10 +89,10 @@ class GPCClient{
     /**
      * @returns {Promise<Buffer>}
      */
-    async #read6byte(){
+    async #read4byte(){
         let buf;
         while(!buf){
-            buf = this.#tcpConnection.read(6);
+            buf = this.#tcpConnection.read(4);
             await wait(0);
         }
         return buf;
@@ -133,7 +133,7 @@ class GPCClient{
         const packageNameInServer = await this.#readMessageUntilNull();
         const platformInServer = await this.#readMessageUntilNull();
         const versionInServer = await this.#readMessageUntilNull();
-        const size = (await this.#read6byte()).readUintBE(0,6);
+        const size = (await this.#read4byte()).readUintBE(0,4);
 
         const dependenciesSize = await this.#read1byte();
         const dependencies = [];
