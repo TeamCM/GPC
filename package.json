@@ -5,5 +5,12 @@
   "license": "MIT",
   "dependencies": {
     "yargs": "^17.5.1"
+  },
+  "repository": {
+    "url": "https://github.com/TeamCM/GPC"
+  },
+  "author": {
+    "name": "MiguelEX3",
+    "url": "https://github.com/MiguelEXE"
   }
 }
